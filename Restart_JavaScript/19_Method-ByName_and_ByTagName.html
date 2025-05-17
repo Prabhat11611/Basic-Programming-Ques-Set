@@ -1,0 +1,49 @@
+<!--
+Previously we have aleady studied about 2 methods of Document:
+1. document.getElementById()        // Here we use the term only "Element" and not the Elements because ID is always unique where as class name, tag name, etc an be multiple.
+2. document.getElementsByClassName()
+
+
+Now we will look for 2 other methods such as:
+document.getElementsByName()
+document.getElementsByTagName()
+
+
+
+We use "document.getElementsByName()" to select elements by their name attribute, commonly in forms 
+where multiple elements share the same name, like radio buttons or inputs, 
+to manipulate or access their values easily.
+
+"document.getElementsByTagName()" is used when we need to select elements by their tag name, 
+such as all <p>, <div>, or <button> elements, allowing us to apply changes or 
+retrieve information from a group of similar tags.
+-->
+
+
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>Other 2 Methods of DOM</title>
+    </head>
+    <body>
+        <input type="" name="user_name">
+        <button onclick="getName()">Try It</button>
+        <h1></h1>
+    </body>
+    <script>
+        function getName(){
+            // var userName=document.getElementsByName('user_name')[0];    // Indexing with 0 because names can be multiple so it will consider the first one as index is passed as 0.
+            // // console.log(userName);
+            // document.getElementsByTagName("h1")[0].innerHTML = userName.value;      // Indexing with 0 because tags can be multiple (such as H1 tag can be more than one) so it will consider the first one as index is passed as 0.
+            
+            // Method-2
+            // var userName=document.getElementsByName('user_name')[0].value;
+            // document.getElementsByTagName("h1")[0].innerHTML = userName;
+
+            // Method-3
+            var userName=document.getElementsByName('user_name')[0].value;
+            document.getElementsByName('user_name')[0].value="";    // Made the placeholder empty after the input has been submitted. Replaced the input with Null value.
+            document.getElementsByTagName("h1")[0].innerHTML = userName;
+        }
+    </script>
+</html>

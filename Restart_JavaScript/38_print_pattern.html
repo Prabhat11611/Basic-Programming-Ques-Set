@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Print Pattern using User defined function</title>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+        var rows=prompt("Please enter: ","");
+        //calling
+        printPattern(rows)      // This is a formal parameter
+        //declare and define
+        function printPattern(rows){        // This is a actual parameter. The formal and actual parameters can be different. It means istead of (rows we can write 'r'), then alos it will fetch the data (from calling parameter).
+            // document.write(rows);
+            for(var i=1; i<=rows;  i++){
+                // document.write(i+"</br>");
+                for(var j=1; j<=i; j++){
+                    document.write("*");
+                }
+                // document.write(i+"</br>");
+                document.write("</br>");
+            }
+
+            // Reverse
+            for(var i=rows; i>=1;  i--){
+                for(var j=1; j<=i; j++){
+                    document.write("*");
+                }
+                document.write("</br>");
+            }
+        }
+    </script>
+</html>

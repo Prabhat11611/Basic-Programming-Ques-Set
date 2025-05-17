@@ -1,0 +1,52 @@
+<!--
+Try..catch block can only handle the predefined error, syntax error and any other run time error.
+The finally statement lets you excute code, after try and catch, regardless of the result:
+Whether error occurs or not, finally will execute.
+Syntax:
+        try{
+            //Block of code to try
+        } catch(err){
+            //Block of ode to handle errors
+        } finally{
+            //Block of code to be executed regardless of the try/catch result
+        }
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Try catch Statement in Javascript</title>
+</head>
+
+<body>
+    Enter a number between 5 and 10
+    <input type="" name="" id="num" /> </br>
+    <button onclick="test()">Click</button>
+
+    <h1 id="result"></h1>
+</body>
+<script type="text/javascript">
+    function test() {
+        var data = num.value;
+        try {
+            if (isNaN(data)) {
+                throw "This is not a number.";
+            } else {
+                if (data < 5 || data > 10) {      // try can not grab logical error, it can identify conceptual errors, syntax errors.
+                    throw "Number is out of range."
+                } else {
+                    throw "";
+                }
+            }
+        } catch (errMessage) {        // catch acts as a Function.
+            document.getElementById("result").innerText = errMessage;
+        }finally{       // Uisng this we are removing the value from the input box, no matter the value is within range or not.
+            num.value="";   // No matter whether error is present or not, finally will be executed.
+        }
+    }
+</script>
+
+</html>

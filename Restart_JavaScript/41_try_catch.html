@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Try catch Statement in Javascript</title>
+    </head>
+    <body>
+        <button onclick="test()">Click</button>
+        <h1 id="result"></h1>
+    </body>
+    <script type="text/javascript">
+        function test(){
+            // alert();
+            try{
+                // alert("Hello");     // Now since here every thing is fine then it will work smothly.
+                // alertf("Hello");        // Now here the alert function is called by wrong name, so it will show error.
+                                        // // Previously this type  of error was only visible in console, but now it will be shown on Browser using try_catch statement.
+                
+                var number=5;
+                var x=number.toUpperCase();
+                alert(x);
+                document.getElementById('result').innerText=x;
+            }
+            catch(err){
+                document.getElementById('result').innerText=err;
+            }
+        }               // Previously without try-catch statement the error handling was done by the compiler but now, we are doing the exception handling
+                        // on our own by our-end side.
+    </script>
+</html>

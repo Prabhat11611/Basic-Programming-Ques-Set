@@ -1,0 +1,71 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>Date Functions</title>
+    </head>
+    <body>
+        <!--
+        List of Methods
+        Date(): To get the current date and time details according to the browser.
+        getFullYear(): Get the year as a four digit number(yyyy).
+        getMonth(): Get the month as a number (0-11).   // It gives the index value.
+        getDate(): Get the day as a number (1-31).
+        getHours(): Get the hour(0-23).
+        getMinutes(): Get the minute(0-59).
+        getSeconds(): Get the second (0-59).
+        getMilliseconds(): Get the millisecond (0-999).
+        getTime(): Get the time (milliseconds since January 1, 1970).
+        getDay(): Get the weekday as a number (0-6).    //  It gives the index value.
+        -->
+
+        <h1 id="result"></h1>
+        <button onclick="getDate()">Date</button>
+        <button onclick="year()">Year</button>
+        <button onclick="month()">Month</button>
+        <button onclick="toDate()">Date</button>
+        <button onclick="hours()">Hour</button>
+        <button onclick="minutes()">Minutes</button>
+        <button onclick="seconds()">Seconds</button>
+        <button onclick="milliseconds()">MilliSeconds</button>
+        <button onclick="time()">Time</button>
+        <button onclick="day()">Day</button>
+    </body>
+    <script>
+        var date = new Date();  // Creating the instance of a class named by date as a new Date.
+
+        function getDate(){
+            document.getElementById('result').innerText=date;
+        }
+        function year(){                                                        // year()- Function made by own.
+            document.getElementById('result').innerText=date.getFullYear();     // getFullYear() - Function made by Javascript.
+        }
+        function month(){
+            // document.getElementById('result').innerText=date.getMonth();        // This will only give the present month index number.
+
+            var month=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Descember"];
+            document.getElementById('result').innerText=month[date.getMonth()];     // month[present month index]
+        }
+        function toDate(){      // function named by "date" was not accepting reason might be that there is a date function from previously.
+            document.getElementById('result').innerText=date.getDate();
+        }
+        function hours(){
+            document.getElementById('result').innerText=date.getHours();
+        }
+        function minutes(){
+            document.getElementById('result').innerText=date.getMinutes();
+        }
+        function seconds(){
+            document.getElementById('result').innerText=date.getSeconds();
+        }
+        function milliseconds(){
+            document.getElementById('result').innerText=date.getMilliseconds();
+        }
+        function time(){
+            document.getElementById('result').innerText=date.getTime();
+        }
+        function day(){
+            day=["Sunday", "Monday", "Tuesday", "Wednesday",  "Thrusday", "Friday", "Saturday", "Sunday"];
+            document.getElementById('result').innerText=day[date.getDay()];
+        }
+    </script>
+</html>

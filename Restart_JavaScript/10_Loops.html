@@ -1,0 +1,53 @@
+<!DOCTYPE Html>
+<html>
+<head>
+    <title>String Concatenation</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    // for(initialization, test_condition, +ement/-ement){}
+    // for(var count=0; count<=10; count++){
+    //     document.write(count+ "<br/>");
+    // }
+    // document.write("Loop Ended.")
+
+
+    // while(expression){}
+    // var i=0;
+    // while(i<10){
+    //     document.write(i+" While Loop.<br/>");
+    //     i++;
+    // }
+
+
+    // foreach loop
+    // A forEach loop (method) is used to get data from JS array or object.
+    // The method calls a function once for each element in an array, in order.
+            // var cars=["car1", "car2", "car3", "car4"];
+            // cars.forEach(myfunction);
+            // function myfunction(item, index, array){}        ==> item - (here "car1") required parameter
+            //                   These sequences are very       ==> index - (here 0 for "car1") it is optional.
+            //                   important (item,index,array)   ==> array - (here cars) it is optional.
+
+            var cars=["car1", "car2", "car3", "car4", "car5"];
+
+            // function car(item){
+            //     document.write(item+"<br/>");
+            // }
+
+            // function car(item, index){
+            //     document.write(index+ "=>" +item+"<br/>");
+            // }
+
+            function car(item, index, array){
+                array[index] = item+"0";            // Adding something new (0) on each array item.
+            }
+            function after(item, index){
+                document.write(index+ "=>" +item+"<br/>");
+            }
+
+            cars.forEach(car);
+            cars.forEach(after);
+</script>
+</html>

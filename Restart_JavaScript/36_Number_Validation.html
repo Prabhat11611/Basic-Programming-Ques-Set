@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Number Validation</title>
+    </head>
+    <body>
+        <p>Enter your Number</p>
+        <input type="text" name="" onkeyup="val(this)"> <!-- (onkeyup) -> The moment the key is pressed-->
+        <div id="result"></div>         <!-- (this) -> it will take the refernce of the whole input box.-->
+                                        <!-- Wherever "this" is used it becomes the refernce of that object.-->
+    </body>
+    <script type="text/javascript">
+        document.getElementById("result").style.color="red";
+        
+        function val(elem){
+            // document.getElementById('result').innerText = elem.value;
+            // isNaN(); is a function used to check whether it is a number or not.
+            if(isNaN(elem.value)){
+                // alert("Yes this is not a Number.");
+                document.getElementById('result').innerHTML="Enter numbers only."
+            } else{
+                // alert("This is a Number.")
+                document.getElementById('result').innerHTML="";
+                if(elem.value.length >10){
+                    document.getElementById('result').innerHTML="Enter only 10 digit number."
+                } else{
+                    document.getElementById('result').innerHTML="";
+                }
+            }
+        }
+    </script>
+</html>

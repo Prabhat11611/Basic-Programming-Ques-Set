@@ -1,0 +1,33 @@
+<!--
+
+The setInterval() method repeats a given function at every given time-interval.
+Syntax:
+window.setInterval(function, milliseconds);
+where,
+    function: first parameter is the function to be executed.
+    milliseconds: indicates the length of the time-interval between each execution.
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Prompt Function</title>
+    </head>
+    <body>
+        <button onclick="test()">Click Here</button>
+    </body>
+    <script type="text/javascript">
+        // function test(){
+        //     alert("hello");
+        // }
+
+        function test(){
+            setInterval(
+                function(){
+                    alert("hello");
+                },
+                2500
+            )
+        }
+    </script>
+</html>

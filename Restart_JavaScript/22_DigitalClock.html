@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style type="text/css">
+            h1{
+                font-size:100px;
+                text-align:center;
+                font-family:verdanal;
+            }
+        </style>
+    </head>
+    <body onload="showTime()">  <!-- Now we don't want that the time will be called after clicking on some button because after all we want the time to be displayed for all time. That's why used this method "onload", so that as soon as the body will be loaded the clock will be called. -->
+        <h1>Clock</h1>
+    </body>
+    <script type="text/javascript">
+        function showTime(){
+            var d=new Date();
+            var h=d.getHours();
+            var m=d.getMinutes();
+            var s=d.getSeconds();
+            var session="AM";
+
+//Last_Step // Converting it form 24hrs to 12hrs formate so that we can have the concept of AM and PM.
+            if(h>12){
+                h=h-12; // h=13-12=1
+            }
+            if(h<=12){
+                session="PM";
+            }
+            h=h<10 ? "0"+h:h;   // Ternary Operator   // if hour is smaller than 10 then concatenate 0 with it. i.e example:- 02, 03, 06....
+            m=m<10?"0" +m:m;
+            s=s<10?"0"+s:s;     // if "second" is smaller then "10" then concatenate "0" with it else leave "second" as it is.
+            
+            var time=h +" : "+m+" : "+s+" "+session;
+            document.getElementsByTagName('h1')[0].innerText=time;  // Remeber where to use 's' with Element and where not to use.
+            setTimeout(showTime, 1000); // In order to refresh the time every second.
+        }
+    </script>
+</html>

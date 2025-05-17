@@ -1,0 +1,45 @@
+<!--
+In JavaScript, getAttribute is used to retrieve the value of a specified attribute from an HTML element. 
+For example, you can get the href of an anchor tag or the src of an image.
+
+On the other hand, setAttribute is used to set or update the value of a specific attribute on an HTML element. 
+This allows you to dynamically change element attributes, such as changing the class, id, or other properties.
+
+setAttribute can set (change) the value of any attribute.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getAttribute and setAttribute methods in Javascript</title>
+        <style type="text/css">
+            .red{
+                color:red;
+            }
+            .blue{
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="test" class="red">
+            Hello Everyone!
+        </div>
+        <button onclick="testing()">Click</button>
+        <h1 id="result"></h1>
+    </body>
+    <script type="text/javascript">
+        var test=document.getElementById('test');   // creating and storing it in global variable so that it will easier to use and doesn't require to write again and again.
+                                                    // Creating the object of test, so that we can use it throught out the program.
+        function testing(){
+            // var cls=document.getElementById('test').getAttribute("class");   // Now declared this statement as a global variable.
+            var cls=test.getAttribute("class");
+            // document.getElementById("result").innerText=cls;
+            if(cls==="red"){
+                test.setAttribute("class","blue");
+            }  else{
+                test.setAttribute("class","red");
+            }
+        }
+    </script>
+</html>

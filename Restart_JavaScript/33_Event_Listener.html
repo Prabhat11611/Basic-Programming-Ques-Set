@@ -1,0 +1,65 @@
+<!--
+Event Listener in JavaScript
+Event Listener is used to perform any task on an event of any element.
+Using event listener one can add and remove task on the occurrence of any event for an element.
+It is a part of JS DOM.
+
+addEventListener method in JavaScript
+The addEventListener() method attaches an event handler to the specified element.
+The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+One can add many event handlers to one element.
+Syntax: element.addEventListener(event,function);.
+                first get the event using 'document.getElement___' and then 'addEventListener'.
+
+
+removeEventListener method in JavaScript
+The removeEventListener() method removes an event handler to the specified element.
+Syntax: element.removeEventListener(event,function);
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>addEventListener in JavaScript</title>
+    </head>
+    <body>
+        <div id="counter">0</div>
+        <button id="btn">Click Me</button>
+        <button id="stop" onclick="stop()">Stop</button>
+    </body>
+    <script type="text/javascript">
+        var i=0;
+        // eventListener-01 (By Method-01)
+        // document.getElementById('btn').addEventListener("click", function(){
+        //     document.getElementById('counter').innerText=i;
+        //     i++;
+        // })
+
+        //eventListener-01 (By Method-02)
+        document.getElementById('btn').addEventListener("click", counter);
+        function counter(){
+            document.getElementById('counter').innerText=i;
+            i++;
+        }
+
+        // eventListener-02  (By Method-02)
+        document.getElementById('btn').addEventListener("mouseenter",colorChange);
+        function colorChange(){
+            document.getElementById('counter').style.color="red";
+        }
+
+        // eventListener-03
+        document.getElementById('btn').addEventListener("mouseleave",colorBack);
+        function colorBack(){
+            document.getElementById('counter').style.color="black";
+        }
+
+
+        function stop(){
+            // alert();
+            document.getElementById('btn').removeEventListener("click",counter);
+        }
+
+        // removeEventListener
+    </script>
+</html>

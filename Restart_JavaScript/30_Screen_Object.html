@@ -1,0 +1,34 @@
+<!--
+Screen Object
+The screen object ontains information about the visitor's screen.
+
+This functions/methods are mostly used when we make games using Javascript.
+            Methods and Funtions both are same in terms of programming laguages. They both are synonyms of each other.
+____________________________________________________________________________________________________________
+|   Property   |                            Description                              |          Syntax     |
+|-----------------------------------------------------------------------------------------------------------
+|  availHeight |  Returns the heigth of the screen (excluding the Windows Taskbar).  |  screen.availHeight |
+|  availWidth  |  Returns the width of the screen (excluding the Windows Taskbar).   |  screen.availWidth  |
+|  colorDepth  |  Returns the bit depth of the color palette for displaying images.  |  screen.colorDepth  |
+|    height    |  Returns the total height of the screen.                            |    screen.height    |
+|  pixelDepth  |  Retruns the color resolution (in bits per pixel) of the screen.    |  screen.pixelDepth  |
+|    width     |  Retrunds the total width of the screen.                            |    screen.width     |
+|______________|_____________________________________________________________________|_____________________|
+-->
+
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Screen Object in Javascript</title>
+    </head>                                             <!--It is not neccessary that always all the codes can be tested on the html code, we can also test using the console.-->
+    <body>
+        <button onclick="test()">Avail Height</button>
+    </body>
+    <script type="text/javascript">
+        function test(){
+            var height=screen.availHeight;
+            alert(height +"px");
+        }
+    </script>
+</html>

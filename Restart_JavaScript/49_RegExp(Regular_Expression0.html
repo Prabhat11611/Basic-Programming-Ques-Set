@@ -1,0 +1,39 @@
+<!--
+A regular expression is an objetc that describes a pattern of characters.
+Regualr expressions are used to perform pattern-matching and "search-and-replace" functions on text.
+
+Syntax                                  Eg:
+/pattern/modifiers;                     var pattern=/wscube/i       Here, wscube denotes to search for pattern where we can get wscube and '/i' is used to make it case irrelevant (case insensitive), so that it can work for both Uppercase and Lowercase.
+Or                                      Or
+newRegExp(patern,modifier);             var pattern = new RegExp('wscube','i')
+
+
+exec()          Tests for a match in a string. Returns the first match.
+test()          Tests for a match in a string. Returns true or false.
+toString()      Returns the string value of the regular expression.
+
+
+-->
+
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>Regualr Expression (RegExp) using JavaScript</title>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+        // var pattern = /[a-z][0-9]/ig;    // This is the way to write a RegExp (use / inted of '' or ""). 'i' is used to search for pattern globally.
+        // var str="WsCube123Teach";
+        // console.log(pattern.exec(str));
+
+        // // Test function -> It will check whether the pattern is matching or the given Stirng or not.
+        // var pattern = new RegExp('[a-z][A-Z][0-9]','ig');
+        // console.log(pattern.toString());
+        
+        // toString() function
+        var pattern = new RegExp('(?=.*[a-z])');    // Along with all these there should be atleast 1 LowerCase.
+        var str="WsCubeTech";   // True
+        var str="WSCUBETECH";   // False
+        console.log(pattern.test(str));
+    </script>
+</html>

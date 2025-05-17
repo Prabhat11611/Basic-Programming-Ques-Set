@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Prompt Function</title>
+    </head>
+    <body>
+        Name: <i id="result"></i><br/>
+        <button onclick="call()">Call</button>
+    </body>
+    <script type="text/javascript">
+        // prompt("Enter your name","");   // one blank space given because we do not want any default value in it.
+        // var result=prompt("Enter your name","");
+        // document.write(result);
+        function call(){
+            var name=prompt("Enter your name","");
+            document.getElementById('result').innerHTML=name;
+        }
+    </script>
+</html>

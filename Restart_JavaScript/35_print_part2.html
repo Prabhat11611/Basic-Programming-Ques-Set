@@ -1,0 +1,70 @@
+<!--
+window.print -> It prints all the things which it gets on that particular Browser's Page.
+                But can be resolved using some logics using DOM. See Part number 35 for better understanding.
+-->
+
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <title>window print statement in Javascript</title>
+</head>
+
+<body id="body">
+    <center>
+    <div>
+        <img src=""/>
+    </div>
+    <h1>Printable Data</h1>
+    <p id="data">
+        Data Part-1
+        Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands.
+    </p>
+    <button onclick="printPage()">Print Content</button>
+    <h2>Unprinable Data</h2>
+    <p>
+        Data Part-2
+        Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands. Every year, we have multiple intakes where a select few professionals undertake our Software Engineer training.
+        This training program is carefully designed by rtCamp to focus on the overall development of individuals using
+        various cutting-edge technologies to meet industry demands.
+    </p>
+</center>
+</body>
+<script type="text/javascript">
+    function printPage(){
+        var body=document.getElementById('body').innerHTML;     // This is the data which does not needs to be printed.
+        // alert(body);
+        var data=document.getElementById('data').innerHTML;     // This is the data which needs to be printed.
+        // alert(data);
+        document.getElementById('body').innerHTML=data;     // Swapping (stored data variable content into body and body variable content into data variable.)
+        window.print();
+        // Now once the data is printed or not printed (cancled to print), the user should come back to the main page. For that again insert that 'body variable' data into body.
+        document.getElementById('body').innerHTML=body;
+
+        // Concept
+        // First picked the content from Body and stored the content into body variable.
+        // Picked the content of data and stored into data variable.
+        // Replaced the content of the data with body.
+        // Now print the content.
+        // After this we will call back the original data stored in body varaible into main body.
+    }
+</script>
+</HTML>

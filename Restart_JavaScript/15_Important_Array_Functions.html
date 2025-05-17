@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Prompt Function</title>
+        <h1 id="res"></h1>
+        <button onclick="pop()">POP</button>
+        <button onclick="push()">PUSH</button>
+        <button onclick="slice()">Slice</button>
+        <button onclick="reverse()">Reverse</button>
+        <button onclick="shift()">Shift</button>
+    </head>
+    <body>
+        <!--
+        valueOf() - To print the data of array.
+        isArray() - Check if the variable is an array or not?
+        concat() - Join several arrays into one.
+        indexOf() - Returns the primitive value of the specified object.
+        join() - Combine elements of an array into a single string and return the string.
+
+        List of Methods
+        pop() - Removes the last element of an array.
+        push() - Add a new element at the end.
+        reverse() - Sort elements in descending order.
+        shift() - Remove the first element of an array.
+        slice() - Pulls a copy of a portion of an array into a new array.
+        -->
+    </body>
+    <script type="text/javascript">
+        // var fruits=["Mango", "Apple", "Pineapple", "Banana"];
+        // var vegitables=["Potato", "Ladyfinger", "Ginger"];
+        // alert(Array.isArray(fruits));
+
+        // var output=Array.isArray(fruits);
+
+        // var output=F=fruits.valueOf();
+
+        // var output=fruits.join();
+        // var output=fruits.join(" ");
+        // var output=fruits.join(" | ")   // we can pass anything inside join whatever we want to see with the array.
+        // document.write("<h1>"+output+"</h1>");
+
+        // var shop=fruits.concat(vegitables);
+        // // document.write("<h1>"+shop+"</h1>");
+
+        // var shop=fruits.concat(vegitables);
+        // var index=shop.indexOf("Apple");
+        // document.write("<h1>"+index+"</h1>");
+
+
+
+        // Methods
+        var fruits=["Mango", "Apple", "Pineapple", "Banana"];
+        var demo=fruits;
+        document.getElementById('res').innerText=demo;
+
+        function pop(){
+            demo.pop();
+            document.getElementById('res').innerText=demo;
+        }
+
+        function push(){
+            var x = prompt("Please enter a fruit", "");
+            demo.push(x);
+            document.getElementById('res').innerText=demo;
+        }
+
+        function slice(){
+            // var x = prompt("Enter the index value of the element to be sliced.");
+            // var x=demo.slice(1);
+            // var x=demo.slice(4);
+            var x=demo.slice(1,2);
+            document.getElementById('res').innerText=x;
+        }
+
+        function reverse(){
+            demo.reverse();
+            document.getElementById('res').innerText=demo;
+        }
+
+        function shift(){
+            var x=demo.shift();
+            document.getElementById('res').innerText=x;
+        }
+    </script>
+</html>

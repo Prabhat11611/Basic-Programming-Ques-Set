@@ -1,0 +1,63 @@
+<!--
+Screen Object
+The screen object ontains information about the visitor's screen.
+
+This functions/methods are mostly used when we make games using Javascript.
+            Methods and Funtions both are same in terms of programming laguages. They both are synonyms of each other.
+____________________________________________________________________________________
+|   Method          |                            Description                       |
+|-----------------------------------------------------------------------------------
+|  Math.PI          |  Return the value of PI(3.14159265358979).                   |
+|  Math.round(x)    |  Return the rounded value of x to its nearest integer.       |
+|  Math.pow(x,y)    |  Return the value of x to the power y.                       |
+|  Math.sqrt(x)     |  Return the square root of x.                                |
+|  Math.abs(-x)     |  Return the positive value of x.                             |
+|  Math.ceil(x)     |  Return teh value of x rounded up to its nearest integer.    |
+|  Math.floor(x)    |  Return the value of x rounded down to its nearest integer.  |
+|  Math.min(x,y,z)  |  Return the minimum value among x,y and z.                   |
+|  Math.max(x,y,z)  |  Return the maximum value among x,y and z.                   |
+|  Math.random      |  Return random decimal value in between 0 and 1.             |
+|___________________|______________________________________________________________|
+-->
+
+<!--Advice: Whenever you need to test any function then use Console for it and whenever you need to implement any function then use Code for it.-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Screen Object in Javascript</title>
+    </head>                                             <!--It is not neccessary that always all the codes can be tested on the html code, we can also test using the console.-->
+    <body>
+        <button onclick="getOtp()">OTP</button>
+    </body>
+    <script type="text/javascript">
+        // var x=Math.round(3.6);
+        // var x=Math.pow(2,3);
+        // var x=Math.sqrt(16);
+        // var x=Math.abs(-2);
+        // var x=Math.ceil(3.1);
+        // var x=Math.floor(3.8);
+        // var x=Math.min(2,6,11);
+        // var x=Math.max(3,12,44);
+        var x=Math.random();
+        document.write("<h1>"+x+"</h1>")
+
+        // Suppose I want to build OTP using this random function then,
+        var x=Math.random()*10000;  // Now this is giving the 4 digit value but along with decimal values.
+        document.write("<h1>"+x+"</h1>");
+
+        var x= Math.floor(Math.random()*10000);
+        document.write("<h1>"+x+"</h1>");
+
+
+
+        function getOtp(){
+            // var otp=Math.floor(Math.random()*10000);     // OR
+            
+            var x=Math.random()*10000;
+            var otp=Math.floor(x);
+
+            alert(otp);
+            document.write("Match your OTP: "+otp);
+        }
+    </script>
+</html>

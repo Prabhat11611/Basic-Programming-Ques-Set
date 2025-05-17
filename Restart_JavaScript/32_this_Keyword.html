@@ -1,0 +1,37 @@
+<!--
+What is this keyword?
+this keyword in JavaScript is used to refer the object it belongs to.
+In a method, this refers to the owner object.
+Alone, this refers to the global oject.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>this Keyword in JavaScript</title>
+    </head>
+    <body>
+        <!-- <button onclick="this.style.display='none'">Click to Hide Me.</button>
+        <button onclick="this.style.background='red'">Click to change button background.</button> -->
+
+        <!-- Part-02 -->
+        <button onclick="remove(this)">Click to hide Me</button>
+    </body>
+    <script type="text/javascript">
+        // var person={
+        //     firstName : "Rahul",
+        //     secondName : "Kumar",
+        //     fullName : function(){
+        //         return this.firstName + this.secondName;
+        //     }
+        // };
+        // document.write("<h1>"+person.fullName());   // Using the Object of the Person. Already studied about this syntax earlier many times (Such in Maths function-> Math.pow()).
+        
+        // Part-02
+        function remove(abcd) {
+            abcd.style.display = "none";
+        }
+    </script>
+</html>

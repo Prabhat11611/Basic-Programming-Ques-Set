@@ -1,0 +1,36 @@
+<!--
+If we have already set a Timeout that after this particular of time this particular task should be launched but
+now  we want to stop the task before the timeinterval (before task launched) then we will use 'clearTimeout()' method.
+
+The clearTimeout() method clears a timer set with the setTimeout() method.
+The ID value returned by setTimeout() is used as the parameter for the clearTimeout() method.
+myVar=setTimeout("function", milliseconds);
+clearTimeout(myVar);
+-->
+
+
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>clearTimeout Method</title>
+    </head>
+    <body>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">Stop</button>
+    </body>
+    <script type="text/javascript">
+        var my;     // defining gloable variable;
+        function start(){
+            my=setTimeout(
+                function(){
+                    document.write("<h1>My Name</h1>");
+                },
+                2000
+            );
+        }
+        function stop(){
+            clearTimeout(my);
+            alert("Timeout Stopped.");
+        }
+    </script>
+</HTML>

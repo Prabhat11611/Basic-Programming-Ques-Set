@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <input type="number" name="first" id="first" step="any"/> <!--step="any" -> It means we can accept decimal numbers as well.-->
+        <select id="ope">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" name="second" id="second" step="any"/>
+        <br/>
+        <br/>
+        <button onclick="cal()">Calculate</button>
+        <input type="text" name="" id="result" readonly=""/>
+    </body>
+    <script type="text/javascript">
+        function cal(){
+            var operand1=document.getElementById('first').value;
+            var operand2=document.getElementById('second').value;
+            var ope=document.getElementById('ope').value;
+
+            if(ope=='+'){
+                var result=parseInt(operand1) + parseInt(operand2);
+            }
+            else if(ope=='-'){
+                var result=parseInt(operand1) - parseInt(operand2);
+            }
+            else if(ope=='*'){
+                var result=parseInt(operand1) * parseInt(operand2);
+            }
+            else if(ope=='/'){
+                var result=parseInt(operand1) / parseInt(operand2);
+            }
+            // alert(result)
+
+            document.getElementById('result').value=result;
+        }
+        
+    </script>
+</html>

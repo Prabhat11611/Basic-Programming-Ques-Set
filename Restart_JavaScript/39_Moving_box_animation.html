@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Basic Animation using Javascript DOM</title>
+        <style type="text/css">
+            .yellow{
+                width:400px;
+                height:400px;
+                margin-top:5px;
+                background:yellow;
+                position:relative;
+            }
+            #red{
+                width:50px;
+                height:50px;
+                background:red;
+                position:absolute;      /*Working with relative to yellow*/
+                top:50px;
+                /* top:350px;          /*400px-50px=350px;*/
+                /*left:350px;         /*400px-50px=350px;*/
+                top:0px;
+                left:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="move()">Click Me</button>
+        <div class="yellow">
+            <div id="red"></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function move(){
+            var redElement=document.getElementById('red');
+            var positionOfElement=0;
+            var anim=setInterval(animate,5);
+
+            function animate(){
+                // positionOfElement++;
+                // redElement.style.top=positionOfElement+"px";
+                // redElement.style.left=positionOfElement+"px";
+                if(positionOfElement==350){
+                    clearInterval(anim);
+                } else{
+                    positionOfElement++;
+                    redElement.style.top=positionOfElement+"px";
+                    redElement.style.left=positionOfElement+"px";
+                }
+            }
+        }
+    </script>
+</html>

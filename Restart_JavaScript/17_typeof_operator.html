@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>typeof Operator</title>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+        var a="coading";
+        document.write(typeof(a));
+        var a=3;
+        document.write("<p>"+typeof(a)+"<p>");
+        var a=true;
+        document.write("<p>"+typeof(a)+"</p>");
+        var a=[];
+        document.write("<p>"+typeof(a)+"</p>");     // Arrays are the Objects for Javascript.
+        var a={
+            "1":"Hello",
+        };
+        document.write("<p>"+typeof(a)+"</p>");
+
+        var date=new Date();    // date is a class and from that class we are creating one new Object.
+        document.write("<p>"+typeof(a)+"</p>");
+    </script>
+</html>

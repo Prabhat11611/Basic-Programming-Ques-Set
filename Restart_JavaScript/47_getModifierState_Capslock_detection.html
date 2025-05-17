@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getModifiersState() function- Detection CAPS LOCK in HTML using Javascript</title>
+    </head>
+    <body>
+        <form action="#" method="post" onsubmit="return validate()">
+        <p>
+            <h1 style="font-size:30px; text-align:center">Registration Form</h1>
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <input id="username" name="username" placeholder="Username" type="text">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" placeholder="Password" type="password" id="password">
+        </p>
+        <p>
+            <label for="confirm_password">Confirm Password</label>
+            <input id="confirm_password" name="confirm_password" placeholder="Confirm Password" type="password" onkeyup="check(this)">
+            <error id="alert"></error>
+        </p>
+        <p>
+            <input id="submit" type="submit" value="SUBMIT">
+        </p>
+    </form>
+    </body>
+    <script type="text/javascript">
+        window.addEventListener('keyup', event=>{
+            // console.log(event.getModifierState('CapsLock'));         // getModifierState check that the just recent event was what?      // It will give the value as True or False.
+            var isCaps=event.getModifierState('CapsLock');
+            if(isCaps){
+                //true
+                document.getElementById('alert').innerText="Warning! CapsLock is on";
+            } else{
+                //false
+                document.getElementById('alert').innerText="";
+            }
+        })
+    </script>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Go back and forward using Javascript History Window DOM</title>
+    </head>
+    <body>
+        <h1></h1>
+        <h2>Second Page</h2>
+        <button onclick="window.history.forward();">Forward</button>     <!--This is the way to write Inline Js, in this we have told here only that what needs to be done. Why to write and make functions for such small code.-->
+        <button onclick="window.history.back();">Back</button>
+    </body>
+    <script type="text/javascript">
+        var c=window.history.length;    // To see how many history url's has been set by the user.
+        document.getElementsByTagName('h1')[0].innerHTML = c;
+    </script>
+</html>

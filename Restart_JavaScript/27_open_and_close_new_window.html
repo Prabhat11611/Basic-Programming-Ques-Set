@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Open and Close new Window using DOM</title>
+    </head>
+    <body>
+        <button onclick="openwin()">Open Window</button>
+        <button onclick="closewin()">Close Window</button>
+    </body>
+    <script>
+        var win;
+        var win2;
+        function openwin(){
+            // Previously we used to write 'document.____', because we were dealing with documents.
+            // Now, we will use 'window._____', as now we will be dealing with any method of window.
+            
+            // window.open();   // To open a new window
+            // window.open("https://prabhat76.bio.link");
+            // win=window.open("https://prabhat76.bio.link");
+
+            // Now to open completely different window insted of new tab and with different ratio.
+            win=window.open("https://prabhat76.bio.link", "width=500px","height=500px");
+
+            win2=window.open();
+        }
+
+        function closewin(){
+            win.close();
+            win2.close();
+        }
+    </script>
+</html>

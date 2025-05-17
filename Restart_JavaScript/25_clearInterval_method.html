@@ -1,0 +1,30 @@
+<!--
+The 'clearInterval()'' method clears a timer set with the 'setInterval()' method.
+The ID value returned by setInterval() in used as the parameter for the clearInterval() method.
+myVar = setInterval("function", milliseconds);
+clearInterval(myVar);
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Prompt Function</title>
+    </head>
+    <body>
+        <h1 id="h1">Name</h1>
+        <button onclick="stop()">Stop</button>
+    </body>
+    <script type="text/javascript">
+        var my = setInterval(count,1000);
+        
+        var a=0;
+        function count(){
+            document.getElementById('h1').innerText=a;  // There is difference between (='a' and =a), when you want the word itself then use (='a'), and when you want the value of a then use (=a).
+            a++;
+        }
+
+        function stop(){
+            clearInterval(my);
+        }
+    </script>
+</html>

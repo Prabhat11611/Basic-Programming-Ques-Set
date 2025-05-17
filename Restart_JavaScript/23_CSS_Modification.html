@@ -1,0 +1,33 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>Modify CSS using Javascript on events</title>
+        <style>
+            #main{
+                color:red;
+                font-size: 50px;
+                text-align: center;
+                margin-top:50px;
+                cursor:pointer;
+                transition:2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">
+            Prabaht Kumar
+        </div>
+    </body>
+    <script type="text/javascript">
+        function modify(){
+            // alert();
+            // console.log(document.getElementById('main'));
+            document.getElementById('main').style.fontSize="100px";    // here we connect with CSS using 'style' and use camelCase to give styling.
+            document.getElementById('main').style.color="blue";
+        }
+        function unmodify(){
+            document.getElementById('main').style.fontSize="50px";
+            document.getElementById('main').style.color="red";
+        }
+    </script>
+</html>

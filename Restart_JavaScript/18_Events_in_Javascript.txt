@@ -1,0 +1,44 @@
+Theory
+
+Events
+In programming, event is an occurance of any action.
+When we use JavaScript in HTML pages, JavaScript can "react" with events.
+Example: When user click the mouse button, ot press any key on the keyboard.
+
+Let's see the events of Mouse and keyboard
+Mouse:
+onclick - The event occurs when the user clicks on an element.
+oncontextmenu - User right-click on an element to open a context menu.
+ondblclick - The user double-clicks on an element.
+onmousedown - User presses a mouse button over an element.
+onmouseenter - The pointer moves onto an element.
+onmouseleave - Pointer moves out of an element.
+onmousemove - The pointer is moving while it is over an element.
+onmouseover  When the pointer is moved onto an element or one of its children.
+onmouseout - User moves the mouse pointer out of an element or one of its children.
+onmouseup - The user releases a mouse button while over an element.
+
+Keyboard:
+onkeydown - When the user is pressing a key down.
+onkeypress - The moment the user starts pressing a key.
+onkeyup - The user releases a key.
+
+
+
+Now let's see the events of FORM
+onchange - The content of a form element changes.
+(for <input>, <select> and <textarea>)
+
+onfocus - An element gets focus.
+onblur - When an element loses focus.
+oninput - User input on an element.
+oninvalid - An element is invalid.
+onrest - A form is rest.
+onsubmit - A form is submitted.
+onselect - The user selects some text (for <input> and <textarea>).
+
+(for <input="search">)
+onsearch - The user writes something in a search field.
+
+document
+onload - When document is fully loaded.

@@ -1,0 +1,38 @@
+<!--
+What is History Object?
+The history object contains the URLs visited by the user (within a browser window).
+The hstory object is part of the window object and is accessed through the window.history property.
+All the major browser supports it.
+
+Histroy object methods.
+____________________________________________________________________________________________
+|  Method      |                  Description                  |          Syntax           |
+|-------------------------------------------------------------------------------------------
+|  back()      |  Loads the previous URL in the History List.  |  window.histroy.back()    |
+| forward()    |  Loads the next URL in the History List.      |  window.history.forword() |
+|   go()       |  Loads a specific URL from the History List.  |  window.history.go()      |
+|______________|_______________________________________________|___________________________|
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Go back and forward using Javascript History Window DOM</title>
+    </head>
+    <body>
+        <h1></h1>
+        <p>First Page</p>
+        <button onclick="window.history.forward()">Forward</button>     <!--This is the way to write Inline Js, in this we have told here only that what needs to be done. Why to write and make functions for such small code.-->
+        <button onclick="window.history.back()">Back</button>
+        <button onclick="window.history.go(-1);">GO</button> <!--This value can be both positve and negative. Negatve means backward and Positive means forward.-->
+        <!--
+        0 - First
+        1 - Second
+        3 - prabhat76.bio.link
+        -->
+    </body>
+    <script type="text/javascript">
+        var c=window.history.length;    // To see how many history url's has been set by the user.
+        document.getElementsByTagName('h1')[0].innerHTML = c;
+    </script>
+</html>

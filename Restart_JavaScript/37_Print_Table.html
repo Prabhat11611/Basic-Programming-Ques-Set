@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Print Table</title>
+        <style type="text/css">
+            div{
+                border-bottom:1px black solid;
+                border-left:1px black solid;
+                border-top:1px black solid;
+                border-right:1px black solid;
+                width:120px;
+                font-family:verdana;
+            }
+        </style>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+        var num=prompt("Enter a number: ","");
+        for(var i=1; i<=10; i++){
+            document.write("<div>");    // html tag can also be given using Javascript.
+            // document.write(i*num);   // Now adding some visually good format.
+            document.write(num+" x "+i+" = "+i*num);
+            document.write("</div>");
+        }
+    </script>
+</html>

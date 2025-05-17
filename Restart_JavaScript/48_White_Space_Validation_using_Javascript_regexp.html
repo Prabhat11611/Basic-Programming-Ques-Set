@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>getModifiersState() function- Detection CAPS LOCK in HTML using Javascript</title>
+</head>
+
+<body>
+    <form action="#" method="post" onsubmit="return validate()">
+        <p>
+        <h1 style="font-size:30px; text-align:center">Registration Form</h1>
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <input id="username" name="username" placeholder="Username" type="text" onkeyup="white(this.value)">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" placeholder="Password" type="password" id="password" onkeyup="white(this.value)">
+        </p>
+        <p>
+            <label for="confirm_password">Confirm Password</label>
+            <input id="confirm_password" name="confirm_password" placeholder="Confirm Password" type="password"
+                onkeyup="check(this)">
+
+        </p>
+        <p>
+            <error id="alert-caps"></error>
+            <input id="submit" type="submit" value="SUBMIT">
+        </p>
+    </form>
+</body>
+<script type="text/javascript">
+    var pattern = /\s/g;    // Regular Expression // (/) It means the regexp pattern strats from here.
+    // (\s) It means that checking the existence of the white space.
+    // (/g) It means checking the existence of the white space globally.
+    var alert = document.getElementById('alert-caps');
+    function white(data) {
+        var isSpace = pattern.test(data);   // pattern recoginised and developer by the developer and data is the user input value.
+        if (isSpace) {
+            alert.innerText = "Space is not allow."
+        } else {
+            alert.innerText = "";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!--
+Try..catch block can only handle the predefined error, syntax error and any other run time error.
+In order to handle user defined error throw is used, which is triggered on the basis of any condition.
+Syntax:
+        try{
+            if(<condition>){
+                throw;
+            }
+        } catch(<error_variable>){
+            // use err here
+        }
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Try catch Statement in Javascript</title>
+    </head>
+    <body>
+        Enter a number between 5 and 10
+        <input type="" name="" id="num"/> </br>
+        <button onclick="test()">Click</button>
+
+        <h1 id="result"></h1>
+    </body>
+    <script type="text/javascript">
+        function test(){
+            var data=num.value;
+            try{
+                if(isNaN(data)){
+                    throw "This is not a number.";
+                } else{
+                    if(data<5 || data>10){      // try can not grab logical error, it can identify conceptual errors, syntax errors.
+                        throw "Number is out of range."
+                    } else{
+                        throw "";
+                    }
+                }
+            } catch(errMessage){        // catch acts as a Function.
+                    document.getElementById("result").innerText = errMessage;
+                }
+        }
+    </script>
+</html>

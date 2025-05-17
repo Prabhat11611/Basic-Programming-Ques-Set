@@ -1,0 +1,37 @@
+<!--
+Here we can set a time that I want my task to be performed after this particular amount of time.
+i.e we can give some delation that after this much time I want my task to be performed.
+
+
+The setTimeout() method executes a function, after waiting a specified number of milliseconds.
+Syntax: window.setTimeout(function, milliseconds);
+where,
+    function: first parameter is the function to be executed.
+    milliseconds: indicated the number of milliseconds before execution takes place. 1sec=1000ms.
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Prompt Function</title>
+    </head>
+    <body>
+        <button onclick="test()">Click Here</button>
+    </body>
+    <script type="text/javascript">
+        // function test(){
+        //     alert("Hello");
+        // }
+
+
+        function test(){
+            setTimeout(
+                function(){
+                    // alert("Hello");
+                    document.write("Hello! I hope you are well.");
+                },
+                2000
+            )
+        }
+    </script>
+</html>
